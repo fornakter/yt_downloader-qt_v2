@@ -25,6 +25,7 @@ class Ui_MainWindow(object):
         self.goButton.setGeometry(QtCore.QRect(540, 10, 94, 27))
         self.goButton.setObjectName("goButton")
         self.goButton.clicked.connect(self.goButtonClick)
+
         self.label = QtWidgets.QLabel(self.centralwidget)
         self.label.setGeometry(QtCore.QRect(20, 90, 71, 19))
         self.label.setObjectName("label")
@@ -102,7 +103,7 @@ class Ui_MainWindow(object):
                 # video
 
                 ydl_opts = {
-                    'format': 'bestvideo+bestaudio/best',  # pobiera najlepszą kombinację wideo+audio
+                    'format': 'bestvideo+bestaudio/best',  # download best quality
                     'outtmpl': os.path.join(output_path, '%(title)s.%(ext)s'),
                 }
 
